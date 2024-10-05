@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- ImageView pour la photo de la pizza -->
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <!-- Nom de la pizza -->
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/photo"
+        android:layout_marginStart="16dp"
+        android:text="Nom de la Pizza"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <!-- Image pour le nombre d'ingrédients -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/nom"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/photo"
+        android:src="@drawable/nbreingredient" />
+
+    <!-- Texte pour le nombre d'ingrédients -->
+    <TextView
+        android:id="@+id/nbrIngredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nom"
+        android:layout_toEndOf="@id/imageView2"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="3 Ingrédients"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- Image de la durée de préparation -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/nbrIngredients"
+        android:layout_toEndOf="@id/photo"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/horloge" />
+
+    <!-- Texte pour la durée de préparation -->
+    <TextView
+        android:id="@+id/duree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nbrIngredients"
+        android:layout_toEndOf="@id/imageView3"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="35 min"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- Image de l'itinéraire -->
+    <ImageView
+        android:id="@+id/itin"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/itineraire" />
+
+    <!-- ID caché -->
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</RelativeLayout>
